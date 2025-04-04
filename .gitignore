@@ -1,0 +1,25 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Python-related files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment files (if any)
+.env
+
+# Log files
+*.log
+
+# Cache directories
+backend_ai/cache/*
+
+# Backend camera directories
+backend_camera/motion/*
+backend_camera/models/*
+backend_camera/saved_faces/*
+
+# Additional common ignores
+*.so
