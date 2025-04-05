@@ -11,7 +11,7 @@ def motion_detection():
     # Adjustable parameters
     min_area = 2000          # Minimum contour area to consider as motion
     var_threshold = 25       # Background subtractor sensitivity (higher = less sensitive)
-    consecutive_frames = 2   # Required consecutive detection frames
+    consecutive_frames = 2   
     motion_counter = 0
     
     # Initialize background subtractor with configurable threshold
