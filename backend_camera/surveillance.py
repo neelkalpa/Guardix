@@ -82,5 +82,3 @@ def motion_detection():
         cap.release()
         cv2.destroyAllWindows()
 
-if __name__ == "__main__":
-    motion_detection()
