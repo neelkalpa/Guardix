@@ -39,7 +39,7 @@ output = model.generate(
     **inputs,
     max_new_tokens=300,
     do_sample=True,
-    temperature=0.7
+    temperature=0.8
 )
 
 description = processor.decode(output[0], skip_special_tokens=True)

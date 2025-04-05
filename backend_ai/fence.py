@@ -23,8 +23,8 @@ model = LlavaNextForConditionalGeneration.from_pretrained(
 )
 
 # Fix 3: Explicit input formatting
-image = Image.open("crossing.jpg")
-prompt = "USER: <image>\nAnswer 'True' if you see people crossing a border. Else answer 'False'. Answer in one word only\nASSISTANT:"
+image = Image.open("fence.jpg")
+prompt = "USER: <image>\nAnswer 'True' if you see a broken fence. Else answer 'False'. Answer in one word only\nASSISTANT:"
 
 # Fix 4: Proper input processing with both text and images
 inputs = processor(
@@ -39,7 +39,7 @@ output = model.generate(
     **inputs,
     max_new_tokens=2,
 
-    temperature=0.8
+    temperature=0.7
 )
 
 description = processor.decode(output[0], skip_special_tokens=True)
