@@ -24,7 +24,7 @@ model = LlavaNextForConditionalGeneration.from_pretrained(
 
 # Fix 3: Explicit input formatting
 image = Image.open("crossing.jpg")
-prompt = "USER: <image>\nDescribe this image in detail.\nASSISTANT:"
+prompt = "USER: <image>\nDescribe the issue at the border.\nASSISTANT:"
 
 # Fix 4: Proper input processing with both text and images
 inputs = processor(
@@ -37,7 +37,7 @@ inputs = processor(
 # Fix 5: Add generation parameters
 output = model.generate(
     **inputs,
-    max_new_tokens=300,
+    max_new_tokens=200,
     do_sample=True,
     temperature=0.8
 )
