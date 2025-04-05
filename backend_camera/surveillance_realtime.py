@@ -41,14 +41,6 @@ def face_detection():
                 cv2.putText(frame, 'Face Detected', (x, y-10),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
-            if len(faces) > 0:
-                current_time = time.time()
-                if current_time - last_capture > cooldown:
-                    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-                    filename = f"faces/face_{timestamp}.jpg"
-                    cv2.imwrite(filename, frame)
-                    print(f"Face detected! Saved {filename}")
-                    last_capture = current_time
 
             cv2.imshow('Face Detection', frame)
 
