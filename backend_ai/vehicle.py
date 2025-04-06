@@ -2,7 +2,7 @@ from transformers import LlavaNextProcessor, LlavaNextForConditionalGeneration, 
 from PIL import Image
 import torch
 
-# Fix 1: Use correct model class and processor
+
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_compute_dtype=torch.float16,
